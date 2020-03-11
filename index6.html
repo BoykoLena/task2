@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Второе задание</title>
+</head>
+<body>
+    <div id="one" onclick="addOne()">one</div>
+    
+    <script>
+        function addOne () {
+            let divOne = document.querySelector("#one");
+            let divTwo = divOne.cloneNode(true);
+            divTwo.innerHTML = "two";
+            divTwo.id = "two";
+            divTwo.setAttribute("onclick","addTwo()");
+    	    divOne.insertAdjacentElement("afterEnd", divTwo);
+            
+        }
+
+        function addTwo () {
+            let divTwoSecond = document.querySelector("#two");
+            let divTwoFirst = divTwoSecond.cloneNode(true);
+            divTwoFirst.innerHTML = "two_first";
+            divTwoSecond.innerHTML = "two_second";
+            divTwoFirst.id = "two_first";
+            divTwoSecond.id = "two_second";
+    	    divTwoSecond.insertAdjacentElement("beforeBegin", divTwoFirst);
+        }
+        
+    </script>
+</body>
+</html>

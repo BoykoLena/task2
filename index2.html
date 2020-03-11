@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>All, Elements</title>
+</head>
+<body>
+    <h1 class="class1" id="id1">Title</h1>
+    <p class="class">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    <a href="#">Link</a>
+
+    <script>
+        let all = document.querySelectorAll("*");
+        for (let i = 0; i < all.length; i++) {
+            all[i].style.color = "red";
+            all[i].style.textDecoration = "none";
+        }
+
+        let myP = document.querySelector("p");
+        myP.style.color = "brown";
+        myP.style.textTransform = "uppercase";
+
+        let myClass = document.querySelector(".class");
+        myClass.style.color = "green";
+        myClass.classList.add("newClass");
+        console.log(myClass.style.cssText);
+
+        let myA = document.querySelector("a");
+        myA.style.fontWeight = "bold";
+        myA.style.fontStyle = "italic";
+        myA.style.textDecoration = "underline";
+        myA.style.textTransform = "uppercase";
+
+        let elemOne = document.querySelector("#id1");
+        elemOne.style.marginTop = "10px";
+        elemOne.style.background = "red";
+
+        let elemTwo = document.querySelector(".class1");
+        elemTwo.classList.add("newClass");
+        console.log(elemTwo.style.cssText);
+    </script>
+</body>
+</html>

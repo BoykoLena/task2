@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Первое задание</title>
+</head>
+<body>
+    <h1 id="id1">Title</h1>
+    <div class="class1" >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla consequuntur, obcaecati recusandae enim laboriosam eaque, sint incidunt. Perferendis mollitia incidunt blanditiis eveniet, fuga sapiente. Magni dicta maxime fugiat sint soluta?        
+    </div>
+
+    <script>
+        let elemOne = document.querySelector("#id1");
+        elemOne.style.color = "red";
+        elemOne.style.marginTop = "10px";
+        elemOne.style.background = "red";
+
+        let elemTwo = document.querySelector(".class1");
+        elemTwo.style.color = "blue";
+        elemTwo.style.fontSize = "14px";
+        elemTwo.style.textDecoration = "underline";
+        elemTwo.classList.add("newClass");
+        console.log(elemTwo.style.cssText);
+    </script>
+</body>
+</html>
